@@ -31,3 +31,38 @@
 </section>
 
 <?php get_footer(); ?>
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="testimonials">
+  <div class="container">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial-grid">
+      <?php
+        $testi_query = new WP_Query([
+          'post_type'      => 'testimonial',
+          'posts_per_page' => 3,
+          'orderby'        => 'date',
+          'order'          => 'DESC',
+        ]);
+        if ( $testi_query->have_posts() ) :
+          while ( $testi_query->have_posts() ) : $testi_query->the_post();
+      ?>
+        <div class="testimonial-card">
+          <?php if ( has_post_thumbnail() ) : ?>
+            <div class="testimonial-thumb">
+              <?php the_post_thumbnail('medium'); ?>
+            </div>
+          <?php endif; ?>
+          <h3><?php the_title(); ?></h3>
+          <div class="testimonial-content">
+            <?php the_excerpt(); ?>
+          </div>
+        </div>
+      <?php
+          endwhile;
+          wp_reset_postdata();
+        endif;
+      ?>
+    </div>
+  </div>
+</section>

@@ -30,3 +30,5 @@ function custom_theme_register_cpt_testimonial() {
     register_post_type('testimonial', $args);
 }
 add_action('init', 'custom_theme_register_cpt_testimonial');
+
+add_theme_support('post-thumbnails');
