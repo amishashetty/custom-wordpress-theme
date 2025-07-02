@@ -24,10 +24,35 @@ body {
 }
 
 .hero {
-  background: #eaeaea;
-  padding: 100px 0;
+  background: url('<?php echo get_template_directory_uri(); ?>/assets/images/hero-bg.png') no-repeat center center/cover;
+  padding: 120px 0;
+  color: #fff;
   text-align: center;
 }
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.cta-btn {
+  background: #007BFF;
+  color: white;
+  text-decoration: none;
+  padding: 14px 30px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.cta-btn:hover {
+  background: #0056b3;
+}
+
 
 .features {
   padding: 50px 0;
@@ -43,4 +68,53 @@ body {
   padding: 20px;
   flex: 1;
   border: 1px solid #ccc;
+}
+
+.features h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 32px;
+}
+
+.feature-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  font-size: 16px;
+  color: #444;
+}
+
+
+
+/* ============ Responsive Styles ============ */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .feature-grid {
+    flex-direction: column;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .cta-btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .site-header,
+  .site-footer {
+    padding: 10px 0;
+  }
+
+  .feature-card {
+    font-size: 14px;
+    padding: 15px;
+  }
 }
