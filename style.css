@@ -4,3 +4,43 @@ Author: Your Name
 Description: A custom WordPress theme for assignment.
 Version: 1.0
 */
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.site-header, .site-footer {
+  background: #f8f8f8;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.hero {
+  background: #eaeaea;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.features {
+  padding: 50px 0;
+}
+
+.feature-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+.feature-card {
+  background: #fff;
+  padding: 20px;
+  flex: 1;
+  border: 1px solid #ccc;
+}
