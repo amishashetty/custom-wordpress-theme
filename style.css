@@ -27,6 +27,19 @@ body {
 
 /* Hero Section */
 .hero {
+  position: relative;
+  overflow: hidden;
+}
+.hero .hero-bg img,
+.hero .hero-bg source {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.hero .container {
+  position: relative;
+  z-index: 2;
   padding: 120px 0;
   color: #fff;
   text-align: center;
@@ -77,6 +90,7 @@ body {
   color: #444;
 }
 
+/* Testimonials Section */
 .testimonials {
   padding: 60px 0;
   background: #f4f4f4;
@@ -98,7 +112,7 @@ body {
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
-.testimonial-thumb img {
+.testimonial-thumb-img {
   max-width: 100%;
   border-radius: 50%;
   margin-bottom: 15px;
@@ -111,22 +125,18 @@ body {
   font-size: 16px;
   color: #555;
 }
-@media (max-width: 768px) {
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .feature-grid,
   .testimonial-grid {
     flex-direction: column;
   }
 }
-
-
-/* Responsive Styles */
-@media (max-width: 1024px) {
-  .feature-grid {
-    flex-direction: column;
-  }
-}
 @media (max-width: 768px) {
+  .hero .container { padding: 80px 0; }
   .hero h1 { font-size: 28px; }
   .cta-btn { font-size: 16px; padding: 10px 20px; }
   .site-header, .site-footer { padding: 10px 0; }
-  .feature-card { font-size: 14px; padding: 15px; }
+  .feature-card, .testimonial-card { font-size: 14px; padding: 15px; }
 }

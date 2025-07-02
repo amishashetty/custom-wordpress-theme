@@ -11,7 +11,11 @@
 <header class="site-header">
   <div class="container">
     <div class="logo">
-      <a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
+      <img
+        src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/logo.svg"
+        alt="<?php bloginfo('name'); ?> Logo"
+        loading="lazy"
+      />
     </div>
     <nav class="main-nav">
       <?php wp_nav_menu(array(

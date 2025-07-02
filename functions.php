@@ -9,13 +9,14 @@ function custom_theme_enqueue_assets() {
 }
 add_action('wp_enqueue_scripts', 'custom_theme_enqueue_assets');
 
-// Add support for menus
+// Add support for menus and thumbnails
 add_theme_support('menus');
+add_theme_support('post-thumbnails');
 register_nav_menus(array(
     'primary-menu' => __('Primary Menu'),
 ));
 
-// Register Custom Post Type: Testimonials
+// Register Testimonials CPT
 function custom_theme_register_cpt_testimonial() {
     $labels = array(
         'name' => 'Testimonials',
@@ -30,5 +31,3 @@ function custom_theme_register_cpt_testimonial() {
     register_post_type('testimonial', $args);
 }
 add_action('init', 'custom_theme_register_cpt_testimonial');
-
-add_theme_support('post-thumbnails');
