@@ -1,6 +1,8 @@
 <?php get_header(); ?>
 
-<section class="hero">
+<section
+  class="hero"
+  style="background: url('<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/hero-bg.png') no-repeat center/center/cover;">
   <div class="container">
     <h1>Build Better Websites With Us</h1>
     <p>Custom WordPress solutions that deliver real results.</p>
@@ -27,6 +29,5 @@
     </div>
   </div>
 </section>
-
 
 <?php get_footer(); ?>

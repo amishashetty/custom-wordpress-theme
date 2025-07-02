@@ -5,41 +5,40 @@ Description: A custom WordPress theme for assignment.
 Version: 1.0
 */
 
+/* Base Styles */
 body {
-  font-family: sans-serif;
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
-
 .container {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.site-header, .site-footer {
+/* Header & Footer */
+.site-header,
+.site-footer {
   background: #f8f8f8;
   padding: 20px 0;
   text-align: center;
 }
 
+/* Hero Section */
 .hero {
-  background: url('<?php echo get_template_directory_uri(); ?>/assets/images/hero-bg.png') no-repeat center center/cover;
   padding: 120px 0;
   color: #fff;
   text-align: center;
 }
-
 .hero h1 {
   font-size: 48px;
   margin-bottom: 20px;
 }
-
 .hero p {
   font-size: 18px;
   margin-bottom: 30px;
 }
-
 .cta-btn {
   background: #007BFF;
   color: white;
@@ -48,16 +47,16 @@ body {
   border-radius: 5px;
   transition: background 0.3s;
 }
-
 .cta-btn:hover {
   background: #0056b3;
 }
 
-
-.features {
-  padding: 50px 0;
+/* Feature Section */
+.features h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 32px;
 }
-
 .feature-grid {
   display: flex;
   gap: 20px;
@@ -69,52 +68,24 @@ body {
   flex: 1;
   border: 1px solid #ccc;
 }
-
-.features h2 {
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 32px;
-}
-
 .feature-card h3 {
   font-size: 20px;
   margin-bottom: 10px;
 }
-
 .feature-card p {
   font-size: 16px;
   color: #444;
 }
 
-
-
-/* ============ Responsive Styles ============ */
-
-/* Tablet */
+/* Responsive Styles */
 @media (max-width: 1024px) {
   .feature-grid {
     flex-direction: column;
   }
 }
-
-/* Mobile */
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 28px;
-  }
-
-  .cta-btn {
-    font-size: 16px;
-    padding: 10px 20px;
-  }
-
-  .site-header,
-  .site-footer {
-    padding: 10px 0;
-  }
-
-  .feature-card {
-    font-size: 14px;
-    padding: 15px;
-  }
+  .hero h1 { font-size: 28px; }
+  .cta-btn { font-size: 16px; padding: 10px 20px; }
+  .site-header, .site-footer { padding: 10px 0; }
+  .feature-card { font-size: 14px; padding: 15px; }
 }
