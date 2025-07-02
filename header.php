@@ -12,7 +12,7 @@
   <div class="container">
     <div class="logo">
       <img
-        src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/logo.svg"
+        src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/logo.png"
         alt="<?php bloginfo('name'); ?> Logo"
         loading="lazy"
       />
